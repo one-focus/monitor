@@ -1,0 +1,78 @@
+{
+  "uid" : "dbe18d2efd14a5bf",
+  "name" : "Monitor ethermine",
+  "fullName" : "Miner: Monitor ethermine",
+  "historyId" : "0661c8b51e02e9a889932b97850fe99b",
+  "time" : {
+    "start" : 1636829288160,
+    "stop" : 1636829288822,
+    "duration" : 662
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "When monitor \"60575Ec21cEa8432cbd722D64e43026B1C1f72dE\" hashrate",
+      "time" : {
+        "start" : 1636829288230,
+        "stop" : 1636829288822,
+        "duration" : 592
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "e3395ce2444a0df3",
+        "name" : "screenshot",
+        "source" : "e3395ce2444a0df3.png",
+        "type" : "image/png",
+        "size" : 10592
+      } ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "tag",
+    "value" : "regression"
+  }, {
+    "name" : "feature",
+    "value" : "Miner"
+  }, {
+    "name" : "framework",
+    "value" : "behave"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ "regression" ]
+  },
+  "source" : "dbe18d2efd14a5bf.json",
+  "parameterValues" : [ ]
+}
