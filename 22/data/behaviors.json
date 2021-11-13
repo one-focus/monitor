@@ -4,13 +4,13 @@
     "name" : "Miner",
     "children" : [ {
       "name" : "Monitor ethermine",
-      "uid" : "dbe18d2efd14a5bf",
+      "uid" : "aa74c684a1cbb504",
       "parentUid" : "cc173d49785bcd6dc59e17174a244f44",
       "status" : "passed",
       "time" : {
-        "start" : 1636829288160,
-        "stop" : 1636829288822,
-        "duration" : 662
+        "start" : 1636842145962,
+        "stop" : 1636842146517,
+        "duration" : 555
       },
       "flaky" : false,
       "newFailed" : false,
