@@ -1,0 +1,26 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "children" : [ {
+    "name" : "Test defects",
+    "children" : [ {
+      "name" : "RuntimeError: Hash rate is: 221.968777\n",
+      "children" : [ {
+        "name" : "Monitor ethermine",
+        "uid" : "eedc44713fbe5a15",
+        "parentUid" : "7ab035046bb5001da7024a0df342290a",
+        "status" : "broken",
+        "time" : {
+          "start" : 1636829433559,
+          "stop" : 1636829435991,
+          "duration" : 2432
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "7ab035046bb5001da7024a0df342290a"
+    } ],
+    "uid" : "bdbf199525818fae7a8651db9eafe741"
+  } ],
+  "name" : "categories"
+}
