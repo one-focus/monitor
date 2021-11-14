@@ -1,4 +1,12 @@
 [ {
+  "buildOrder" : 45,
+  "reportUrl" : "https://one-focus.github.io/monitor/45/",
+  "reportName" : "Allure Report with history",
+  "data" : {
+    "run" : 1,
+    "retry" : 0
+  }
+}, {
   "buildOrder" : 44,
   "reportUrl" : "https://one-focus.github.io/monitor/44/",
   "reportName" : "Allure Report with history",
@@ -145,14 +153,6 @@
 }, {
   "buildOrder" : 26,
   "reportUrl" : "https://one-focus.github.io/monitor/26/",
-  "reportName" : "Allure Report with history",
-  "data" : {
-    "run" : 1,
-    "retry" : 0
-  }
-}, {
-  "buildOrder" : 25,
-  "reportUrl" : "https://one-focus.github.io/monitor/25/",
   "reportName" : "Allure Report with history",
   "data" : {
     "run" : 1,
