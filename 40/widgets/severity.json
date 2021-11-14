@@ -1,0 +1,11 @@
+[ {
+  "uid" : "fb907a5a37e76abe",
+  "name" : "Monitor ethermine",
+  "time" : {
+    "start" : 1636863286522,
+    "stop" : 1636863287269,
+    "duration" : 747
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]
