@@ -2,13 +2,13 @@
   "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
   "children" : [ {
     "name" : "Monitor ethermine",
-    "uid" : "ebb4f800a69188cf",
+    "uid" : "dc95e69dcf733de5",
     "parentUid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
     "status" : "passed",
     "time" : {
-      "start" : 1636836705038,
-      "stop" : 1636836705620,
-      "duration" : 582
+      "start" : 1636858701433,
+      "stop" : 1636858702006,
+      "duration" : 573
     },
     "flaky" : false,
     "newFailed" : false,
