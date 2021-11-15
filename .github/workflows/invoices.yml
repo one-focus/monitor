@@ -3,13 +3,14 @@ name: Test
 on:
   push:
   schedule:
-    - cron: '*/5 * * * *'
+    - push
+    - cron: '0 3 * * *'
 jobs:
   build:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        tag: ["regression"]
+        tag: ["invoices"]
     steps:
     - uses: actions/checkout@v2
     - name: Cache requirements

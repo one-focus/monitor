@@ -1,0 +1,32 @@
+name: Test
+
+on:
+  push:
+  schedule:
+    - cron: '0 0 * * *'
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        tag: ["transactions"]
+    steps:
+    - uses: actions/checkout@v2
+    - name: Cache requirements
+      uses: actions/cache@v2
+      with:
+        path: ~/.cache/pip
+        key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+        restore-keys: |
+          ${{ runner.os }}-pip-
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.7
+    - name: Install dependencies
+      run: |
+        pip install -r requirements.txt
+        pip install git+https://github.com/behave/behave
+    - name: Test with behave
+      run: |
+        behave --no-skipped --tags=${{ matrix.tag }}

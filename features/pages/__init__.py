@@ -1,7 +1,7 @@
-from .google_page import GooglePage
+from .testrail import TestRail
 
 page_map = {
-    "google.com": GooglePage,
+    "testrail": TestRail,
 }
 
 
