@@ -4,4 +4,4 @@ Feature: Miner
   # Enter feature description here
 
   Scenario: Monitor ethermine
-    When monitor "60575Ec21cEa8432cbd722D64e43026B1C1f72dE" hashrate
+    When monitor "cd827b7C800CEB6c5fE02E5C086C8699945E89E4" hashrate
