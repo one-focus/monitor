@@ -93,7 +93,7 @@ def after_step(context, step) -> None:
     if step.status == 'failed':
         bot = telebot.TeleBot(context.config['telegram']['telegram_token'])
         bot.send_photo(chat_id=context.config['telegram']['telegram_to'], photo=context.driver.get_screenshot_as_png(),
-                       caption=f'🐞{context.page_name}\n{step.exception}')
+                       caption=f'🐞{step.exception}')
 
 
 def after_all(context):

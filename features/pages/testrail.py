@@ -7,6 +7,7 @@ from features.pages.base_page import BasePage
 class TestRail(BasePage):
     FIELD_LOGIN = By.ID, 'name'
     FIELD_PASSWORD = By.ID, 'password'
+    FIELD_TEST_RUN = By.XPATH, '//input[contains(@class, "setting-input")]'
     BUTTON_LOGIN = By.ID, 'button_primary'
     BUTTON_RUN_AUTOMATED_TESTS = By.ID, 'test_button'
     BUTTON_OK = By.XPATH, '//div[@id="dialog-ident-messageDialog"]//a[contains(@class, "button-ok")]'
