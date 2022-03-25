@@ -1,0 +1,14 @@
+name: Build
+
+on:
+  push:
+  schedule:
+    - cron: '0 6 * * *'
+
+jobs:
+  build-pages:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger GitHub pages rebuild
+        run: |
+          curl -v -X POST ${{ secrets.JENKINS_URL }}?TEST_AUTOMATION_ENVIRONMENT=morpheus&TEST_AUTOMATION_TEST_RAIL_RUN_ID=765 --user ${{ secrets.JENKINS_USER }}
