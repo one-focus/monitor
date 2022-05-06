@@ -44,5 +44,6 @@ def login_visa(context, email, password):
         context.current_page.click_on('password field')
         context.current_page.type_in('password field', password)
         context.current_page.click_on('login button')
+    sleep(10)
     element = (By.XPATH, '//div[@id="timeTable"]/following-sibling::p/a')
     context.current_page.hover_element(element)
