@@ -58,6 +58,13 @@ class BasePage:
             expected_condition,
             message=f'Не могу найти {element_name} в течение {timeout} сек')
 
+    def get_elements(self, element_name, timeout=5):
+        locator = self.get_element_by_name(element_name)
+        expected_condition = ec.presence_of_all_elements_located(locator)
+        return WebDriverWait(self.driver, timeout).until(
+            expected_condition,
+            message=f'Не могу найти {element_name} в течение {timeout} сек')
+
     def get_clickable_element(self, element_name, timeout=5):
         locator = self.get_element_by_name(element_name)
         expected_condition = ec.element_to_be_clickable(locator)

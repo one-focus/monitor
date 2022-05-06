@@ -1,3 +1,4 @@
-import requests
+import telebot
 
-print(requests.get('https://api.ethermine.org/miner/60575Ec21cEa8432cbd722D64e43026B1C1f72dE/dashboard').json())
+bot = telebot.TeleBot('1275523107:AAF_5t_r80J55Pl-JcVeLcVVOsl7kadqAc4')
+bot.send_message(chat_id=-407923666, text=f'🐞')
