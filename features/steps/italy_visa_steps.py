@@ -10,7 +10,7 @@ def monitor_italian_visa(context):
     all_dates = []
     available_dates_xpath = 'a[not(contains(@class, "appt-table-btn full"))]'
     while True:
-        if len(context.current_page.get_elements((By.XPATH, f'//div[@id="timeTable"]//{available_dates_xpath}'))) > 0:
+        if len(context.driver.find_elements_by_xpath(f'//div[@id="timeTable"]//{available_dates_xpath}')) > 0:
             print('dates found')
             titles = context.driver.find_elements_by_xpath(
                 f'//div[@id="timeTable"]//{available_dates_xpath}/preceding-sibling::span[@class="appt-table-d"]')
