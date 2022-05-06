@@ -1,7 +1,7 @@
 from time import sleep
 
 import telebot
-from behave import *
+from behave import when
 from selenium.webdriver.common.by import By
 
 
@@ -10,7 +10,7 @@ def monitor_italian_visa(context):
     all_dates = []
     available_dates_xpath = 'a[not(contains(@class, "appt-table-btn full"))]'
     while True:
-        if context.current_page.get_element((By.XPATH, f'//{available_dates_xpath}')):
+        if len(context.current_page.get_elements((By.XPATH, f'//div[@id="timeTable"]//{available_dates_xpath}'))) > 0:
             print('dates found')
             titles = context.driver.find_elements_by_xpath(
                 f'//div[@id="timeTable"]//{available_dates_xpath}/preceding-sibling::span[@class="appt-table-d"]')
