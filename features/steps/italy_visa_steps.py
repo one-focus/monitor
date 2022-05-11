@@ -56,7 +56,7 @@ def login_visa(context):
             break
     else:
         raise RuntimeError(f'Unable to login. Error is {context.current_page.get_text(messages)}')
-    context.current_page.hover_element((By.XPATH, '//div[@id="timeTable"]//a'))
+    context.current_page.hover_element((By.XPATH, '//div[@id="timeTable"]'))
 
 
 def login(context, email, password):
