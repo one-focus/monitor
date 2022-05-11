@@ -28,7 +28,7 @@ def monitor_italian_visa(context):
             if len(context.driver.find_elements_by_id('timeTable')) > 0:
                 context.current_page.hover_element((By.ID, 'timeTable'))
             else:
-                login_visa()
+                login_visa(context)
         sleep(3600)
 
 
