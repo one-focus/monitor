@@ -29,21 +29,37 @@ def monitor_italian_visa(context):
         sleep(60)
 
 
-@when('login with "{email}" and "{password}"')
-def login_visa(context, email, password):
+@when('login visa')
+def login_visa(context):
+    logins = {'priva898@mail.ru': 'Viza2020!', 'nina.minsk@bk.ru': 'Vl6689563*', 'kauha1978@mail.ru': 'Viza2020!',
+              'ida1516@mail.ru': 'Viza2020!', 'mikha160783@mail.ru': 'Viza2020!', 'veko1717@mail.ru': 'Viza2020!',
+              'veko1616@mail.ru': 'Viza2020!', 'kovalok1919@mail.ru': 'Viza2020!', 'halinam1963@mail.ru': 'Viza2020!',
+              'viktar1959@mail.ru': 'Viza2020!', 'bezmenv1982@mail.ru': 'Viza2020!',
+              'aleks_ber88@mail.ru': 'Vl6689563*', 'masha.list66@mail.ru': 'Vl6689563*',
+              'vadim77by@yandex.ru': 'Vl6689563*', 'romanukyur71@gmail.com': 'Vl6689563*'}
+    messages = (By.XPATH,
+                '//*[contains(text(),"Your account is temporarily locked") or contains(text(), "Please enter the provided e-mail address")]')
+    for email, password in logins.items():
+        login(context, email, password)
+        sleep(10)
+        if context.current_page.is_element_displayed(messages):
+            continue
+        if not context.current_page.is_element_invisible('login button'):
+            login(context, email, password)
+            sleep(10)
+            if not context.current_page.is_element_invisible('login button'):
+                break
+        else:
+            break
+    else:
+        raise RuntimeError(f'Unable to login. Error is {context.current_page.get_text(messages)}')
+    context.current_page.hover_element((By.XPATH, '//div[@id="timeTable"]/following-sibling::p/a'))
+
+
+def login(context, email, password):
     context.current_page.click_on('authorize menu')
     context.current_page.click_on('email field')
     context.current_page.type_in('email field', email)
     context.current_page.click_on('password field')
     context.current_page.type_in('password field', password)
     context.current_page.click_on('login button')
-    if not context.current_page.is_element_invisible('login button'):
-        context.current_page.click_on('authorize menu')
-        context.current_page.click_on('email field')
-        context.current_page.type_in('email field', email)
-        context.current_page.click_on('password field')
-        context.current_page.type_in('password field', password)
-        context.current_page.click_on('login button')
-    sleep(10)
-    element = (By.XPATH, '//div[@id="timeTable"]/following-sibling::p/a')
-    context.current_page.hover_element(element)

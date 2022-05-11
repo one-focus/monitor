@@ -6,5 +6,5 @@ Feature: Visa
   Scenario: Run tests on test rail
     When open url: "https://it.tlscontact.com/by/msq/myapp.php?fg_id=937068"
     Then page italy visa is opened
-    When login with "priva898@mail.ru" and "Viza2020!"
+    When login visa
     When monitor visa
