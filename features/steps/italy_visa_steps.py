@@ -25,8 +25,11 @@ def monitor_italian_visa(context):
                            caption=f'{str(all_dates)[:100]}')
         else:
             context.driver.refresh()
-            context.current_page.hover_element((By.ID, 'timeTable'))
-        sleep(60)
+            if len(context.driver.find_elements_by_id('timeTable')) > 0:
+                context.current_page.hover_element((By.ID, 'timeTable'))
+            else:
+                login_visa()
+        sleep(3600)
 
 
 @when('login visa')
