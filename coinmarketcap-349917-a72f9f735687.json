@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "coinmarketcap-349917",
+  "private_key_id": "a72f9f73568774ed7ca076d5aaa947b4b4e68706",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDh7JfE/GOmMLM8\ncTAAMTEMDOcuvapUrstOzWp5wB2gMeY/VdENfvahDHLHdmb5AkQJWNp0OCNoAzjU\nZJxhGkx/rie/QOBVFMsbIVghydwKkFUJ8UKr+4IBMntKrNg2jeWOY5GW71yChcnu\nvE61hlw2VkjWORwkeVIIJfLvAnoc+x2WdvT3xTqs+/MxCxitvi3apCYoKwVBP1Y4\nGJB5geIx2Y9N9jW4LOjzpxFMB3kUahhUBpSHjQR9pDcSGofcWahSuJVDCTzuOm4J\nhAZEQsvbMYNJXhkrkwhLRCKRpUeW12hSgqlccJExV65Fzl6OQzO2mmg50HqFe2wN\n+jROBl/NAgMBAAECggEAUFuVfgjhrtaKohiGYMMedXFPd2YZ5CYKBXz1/tkxEG4/\nPc7Z3UmIEq95Ue4Q4UgHiCWVChp/qXrf51fj8XvnstBwrcu3HzwWpA8/qEEC5bUB\nslgghUifrKpWhTCmdP0SpgtPWRbJWlmZAjPzcQiZ2u/k12GX23dVkLViy9WfNpgG\nDTn7Z2HC2WvO6+ieAfNfssHt4PjzeJ6wNsQQBnYizkRUQQ6pJwp9+uIqs3rFtUx2\nwoT4QNxz6WqmmyM+G6EBsQaegl5LsE97ehzvY1jN8tUZ2X78XFS9N7H2u2GlczaC\nhW/HT+FvIju2p2b4q0f8d1fUoW1vTOwLRhTwRJN/dwKBgQDzkyKTYV3llSt4N5Fr\nRSf08Dh+USbRQglZs3X2twnc+4R8DdbInY5R6dM46ZUjeVk1NTXp+93hPVJY+ALU\npdEkCpcxhKHkBJVs76BkmllN2y60d6WNMalkud7ecTqceogK5rYhCkY86Bjhgsx4\nEXzBnQFpzxlt1hiwnri39k0bwwKBgQDtcvUjCNdyZwbuhWYWClxtT2qtPR00ZDki\ndkdGcAeEGfKJkt0H+O+BpX+M9n38AyoDhgGwCHjqa4BC9BzFaAom/OH0yRYEqACQ\npemy+sFX9jbd7JRg6WC9dvLQ8RiHcSijot8LtFfiFgxPf27G31gPpvOR0Rh8hKZ2\na9UgUT8tLwKBgBQ1+0J7a80nCYpaIgjiniQm4qkolq36asg0qe8k1P6vKBkbFN1k\npXCKlGo+h49//DT8C1M1AP41lmWnfqSida4l6tHDDaPb9YIqiAaRACQDseZrnyMO\nId4nxiRzBMgDKtKsviQTtCxNnfLoZYr4+H8gRgO/mX6Rq07MfMtW9qL9AoGBANzG\ngUTE6MVXI+vMnsGpeoysRayz4R6gfTscrGLCsUpTcd4WbmsGO3LY9UKUwUj7jCng\nhFsvVXXo5EXcgY/Oj3n2sQUPnuhPaM8VZLhkTDbEF/m6CbAd7jPbkCNTuBHe1gFn\n42kXkosFIwcbnl1Mtq0+9sNCnjjQgZIj6vL0eABDAoGBALGl6bBdaE7Xiar3apoi\nwpk8ZWPFnTpmqw3ieAXjH9geCkIvQzw8RsauE9ohORdyfkdYbEfgnhqWP64IhmxS\ncgFfU9WWmG1NsoXBXVosz4nRdNlKYhPi67yP6Cyy8pCn25wckuambvGRgkBFXpV7\nMN/DU/21Hbxfb53CmVmCteyx\n-----END PRIVATE KEY-----\n",
+  "client_email": "coinmarketcap@coinmarketcap-349917.iam.gserviceaccount.com",
+  "client_id": "103729887869764170645",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/coinmarketcap%40coinmarketcap-349917.iam.gserviceaccount.com"
+}

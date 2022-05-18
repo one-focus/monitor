@@ -1,9 +1,11 @@
+from .coinmarketcap import Coinmarketcap
 from .italy_visa_page import ItalyVisa
 from .testrail import TestRail
 
 page_map = {
     "testrail": TestRail,
-    "italy visa": ItalyVisa
+    "italy visa": ItalyVisa,
+    "coinmarketcap": Coinmarketcap
 }
 
 

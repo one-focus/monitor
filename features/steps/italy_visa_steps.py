@@ -25,11 +25,40 @@ def monitor_italian_visa(context):
                            caption=f'{str(all_dates)[:100]}')
         else:
             context.driver.refresh()
-            if len(context.driver.find_elements_by_id('timeTable')) > 0:
-                context.driver.execute_script("window.scrollTo(0, 250)")
+            if len(context.driver.find_elements_by_class_name('form_status')) > 0:
+                context.current_page.hover_element((By.CLASS_NAME, 'form_status'))
             else:
                 login_visa(context)
         sleep(3600)
+
+
+def fill_form(context, json):
+    json = {
+        'surname': '',
+        'first_name': '',
+        'sex': '',
+        'dob': '',
+        'country_of_birth': '',
+        'nationality': '',
+        'type_of_document': '',
+        'document_number': '',
+        'issue_date': '',
+        'expiry_date': '',
+        'issued_by': '',
+        'occupation_status': '',
+        'marital_status': '',
+        'mobile_number': '',
+        'main_destination': '',
+        'date_of_arrival_schengen': '',
+        'date_of_departure_schengen': '',
+        'insurance_start_date': '',
+        'insurance_end_date': '',
+        'passport_delivery': '',
+        'home_number': '',
+        'street': '',
+        'city': '',
+        'postcode': '',
+    }
 
 
 @when('login visa')
@@ -56,7 +85,7 @@ def login_visa(context):
             break
     else:
         raise RuntimeError(f'Unable to login. Error is {context.current_page.get_text(messages)}')
-    context.current_page.hover_element((By.XPATH, '//div[@id="timeTable"]'))
+    context.driver.execute_script("window.scrollTo(0, 500)")
 
 
 def login(context, email, password):
