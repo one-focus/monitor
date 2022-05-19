@@ -7,22 +7,13 @@ from selenium.webdriver.common.by import By
 
 @when('monitor visa')
 def monitor_italian_visa(context):
-    all_dates = []
-    available_dates_xpath = 'a[not(contains(@class, "appt-table-btn full"))]'
     while True:
-        if len(context.driver.find_elements_by_xpath(f'//div[@id="timeTable"]//{available_dates_xpath}')) > 0:
+        if context.current_page.is_element_displayed('create application button'):
+            context.current_page.hover_element((By.CLASS_NAME, 'form_status'))
             print('dates found')
-            titles = context.driver.find_elements_by_xpath(
-                f'//div[@id="timeTable"]//{available_dates_xpath}/preceding-sibling::span[@class="appt-table-d"]')
-            titles = [title.text for title in titles]
-            for title in titles:
-                month = title.split('\n')[0]
-                xpath = f'//span[contains(text(),"{month}")]/following-sibling::{available_dates_xpath}'
-                times = context.driver.find_elements_by_xpath(xpath)
-                all_dates.append([f'{month} : {time.text}' for time in times])
             bot = telebot.TeleBot(context.config['telegram']['telegram_token'])
             bot.send_photo(chat_id=-1001497020962, photo=context.driver.get_screenshot_as_png(),
-                           caption=f'{str(all_dates)[:100]}')
+                           caption=f'Кнопка "Зарегистрировать Визу" доступна')
         else:
             context.driver.refresh()
             if len(context.driver.find_elements_by_class_name('form_status')) > 0:
