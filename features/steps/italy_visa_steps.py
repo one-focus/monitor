@@ -13,7 +13,7 @@ def monitor_italian_visa(context):
         if context.current_page.is_element_displayed('create application button'):
             bot = telebot.TeleBot(context.config['telegram']['telegram_token'])
             bot.send_photo(chat_id=-1001497020962, photo=context.driver.get_screenshot_as_png(),
-                           caption=f'Слетели данные')
+                           caption=f'Слетели данные для {context.email}')
         elif len(context.driver.find_elements_by_xpath(f'//div[@id="timeTable"]//{available_dates_xpath}')) > 0:
             print('dates found')
             titles = context.driver.find_elements_by_xpath(
@@ -84,6 +84,7 @@ def login_visa(context):
             login(context, email, password)
             sleep(10)
             if not context.current_page.is_element_invisible('login button'):
+                context.email = email
                 break
         else:
             break
