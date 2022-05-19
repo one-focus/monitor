@@ -76,6 +76,7 @@ def login_visa(context):
     messages = (By.XPATH,
                 '//*[contains(text(),"Your account is temporarily locked") or contains(text(), "Please enter the provided e-mail address")]')
     for email, password in logins.items():
+        context.email = email
         login(context, email, password)
         sleep(10)
         if context.current_page.is_element_displayed(messages):
@@ -84,7 +85,6 @@ def login_visa(context):
             login(context, email, password)
             sleep(10)
             if not context.current_page.is_element_invisible('login button'):
-                context.email = email
                 break
         else:
             break
