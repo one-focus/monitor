@@ -1,6 +1,7 @@
 name: Hashrate
 
 on:
+  push:
   schedule:
     - cron: '*/60 * * * *'
 jobs:
