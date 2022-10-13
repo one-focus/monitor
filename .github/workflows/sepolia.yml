@@ -26,7 +26,6 @@ jobs:
     - name: Install dependencies
       run: |
         pip install -r requirements.txt
-        pip install git+https://github.com/behave/behave
     - name: Test with behave
       run: |
         python3 sepolia_ui.py ${{ matrix.tag }}
