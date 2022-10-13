@@ -1,9 +1,9 @@
-name: sepolia
+name: sepolia_ui
 
 on:
   push:
   schedule:
-    - cron: '0 */2 * * *'
+    - cron: '0 8 * * *'
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -29,5 +29,4 @@ jobs:
         pip install git+https://github.com/behave/behave
     - name: Test with behave
       run: |
-        python3 sepolia.py ${{ matrix.tag }}
         python3 sepolia_ui.py ${{ matrix.tag }}
