@@ -7,7 +7,7 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 
 options = webdriver.ChromeOptions()
-# options.headless = True
+options.headless = True
 driver = uc.Chrome(options=options, use_subprocess=True)
 driver.get('https://faucet-sepolia.rockx.com/')
 driver.find_element(By.XPATH, '//input[@placeholder="Paste the tweet URL here"]').send_keys(sys.argv[1])
