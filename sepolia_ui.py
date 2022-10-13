@@ -16,6 +16,8 @@ if __name__ == '__main__':
     driver.find_element(By.XPATH, '//button[text()="Send Me ETH"]').click()
     locator = By.XPATH, '//div[contains(@class, "arco-message-wrapper-top")]'
     expected_condition = ec.presence_of_element_located(locator)
-    result = WebDriverWait(driver, 10).until(expected_condition, message=f'Не могу найти')
-    print(result.text)
+    try:
+        print(WebDriverWait(driver, 10).until(expected_condition, message=f'Не могу найти').text)
+    except:
+        print(driver.page_source)
     #'Funding request accepted'
