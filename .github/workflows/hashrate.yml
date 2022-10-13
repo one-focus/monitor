@@ -3,7 +3,7 @@ name: Hashrate
 on:
   push:
   schedule:
-    - cron: '*/60 * * * *'
+    - cron: '0 0 * * FRI'
 jobs:
   build:
     runs-on: ubuntu-latest
