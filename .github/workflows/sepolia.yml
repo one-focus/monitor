@@ -30,3 +30,4 @@ jobs:
     - name: Test with behave
       run: |
         python3 sepolia.py ${{ matrix.tag }}
+        python3 sepolia_ui.py ${{ matrix.tag }}

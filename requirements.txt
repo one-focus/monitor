@@ -10,3 +10,4 @@ requests~=2.26.0
 configparser~=5.2.0
 behave~=1.2.6
 pygsheets
+undetected-chromedriver
