@@ -1,7 +1,5 @@
 import sys
 
-import telebot
-import undetected_chromedriver as uc
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
@@ -10,7 +8,7 @@ from selenium.webdriver.support import expected_conditions as ec
 if __name__ == '__main__':
     options = webdriver.ChromeOptions()
     options.headless = True
-    driver = uc.Chrome(options=options)
+    driver = webdriver.Chrome(options=options)
     try:
         driver.get('https://faucet-sepolia.rockx.com/')
         driver.find_element(By.XPATH, '//input[@placeholder="Paste the tweet URL here"]').send_keys(sys.argv[1])
